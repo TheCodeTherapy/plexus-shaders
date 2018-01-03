@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plexus and Shaders on my Weird TV</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/ambientjam.css">
+</head>
+<body>
+    <div id="container"></div>
+    <button id="aboutBtn">About</button>
+    <div id="info" class="modalIinfo">
+        <h1>Plexus and Shaders on my Weird TV</h1>
+        <p>Created by: <a href="https://twitter.com/marcogomez_" target="_blank">@marcogomez_</a> Come say hi! :)</p>
+        <p>Hello there, my name is Marco Gomez and this is a WebGL Demo created using ThreeJS, Vertex Shaders and
+            Fragment Shaders. The purpose of this demo is to stress test shader passes with a PlexusParticles system
+            to evaluate the performance of those visual effects on modern graphics cards, and also to have some fun by
+            looking at some super cool stuff =)</p>
+        <p>You can use the <strong>Open Controls</strong> menu at the bottom left corner of your screen to tweak the
+            parameters and have some fun with the demo!</p>
+        <p>This experiment is better viewed with Google Chrome.</p>
+    </div>
+    <div id="stats"></div>
+    <div id="custom-gui"></div>
+
+    <script type="text/javascript" src="lib/three.min.js"></script>
+    <script type="text/javascript" src="lib/stats.min.js"></script>
+    <script type="text/javascript" src="lib/simplexnoise.js"></script>
+    <script type="text/javascript" src="lib/minivents.min.js"></script>
+    <script type="text/javascript" src="lib/tween.min.js"></script>
+    <script type="text/javascript" src="lib/dat.gui.min.js"></script>
+
+    <script src="lib/shaders/CopyShader.js"></script>
+    <script src="lib/shaders/EffectComposer.js"></script>
+    <script src="lib/shaders/RenderPass.js"></script>
+    <script src="lib/shaders/ShaderPass.js"></script>
+    <script src="lib/shaders/ConvolutionShader.js"></script>
+
+    <script src="lib/shaders/FXAAShader.js"></script>
+    <script src="lib/shaders/FilmPass.js"></script>
+    <script src="lib/shaders/FilmShader.js"></script>
+    <script src="lib/shaders/BloomPass.js"></script>
+    <script src="lib/shaders/CRTShader.js"></script>
+    <script src="lib/shaders/RGBShiftShader.js"></script>
+    <script src="lib/shaders/VignetteShader.js"></script>
+    <script src="lib/shaders/StaticShader.js"></script>
+    <script src="lib/shaders/KaleidoShader.js"></script>
+    <script src="lib/shaders/TechnicolorShader.js"></script>
+    <script src="lib/shaders/SepiaShader.js"></script>
+
+    <script type="text/javascript" src="js/plexusparticles.js"></script>
+    <script type="text/javascript" src="js/spotlights.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/configurestats.js"></script>
+    <script type="text/javascript" src="js/configuregui.js"></script>
+    <script type="text/javascript" src="js/setrenderer.js"></script>
+    <script type="text/javascript" src="js/setpostprocessingchain.js"></script>
+    <script type="text/javascript" src="js/eventsandhelpers.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        var modal = document.getElementById('info');
+        var openModal = document.getElementById("aboutBtn");
+        openModal.onclick = function() {
+            if (modal.style.visibility === "visible") {
+                modal.style.visibility = "hidden";
+            } else {
+                modal.style.visibility = "visible";
+            }
+        };
+    </script>
+</body>
+</html>

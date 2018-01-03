@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Electrolize');
+
+@font-face {
+    font-family: Electrolize;
+}
+
+/* reset */
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body, html{
+	background: #060612; /* Old browsers */
+	/* background: -moz-linear-gradient(top,  #203070 0%, #000000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #303031 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+	/* background: linear-gradient(to bottom,  #203070 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+#custom-gui {
+	position: absolute;
+	bottom: 21px;
+	left: 1px;
+	border-top: 1px dotted #303030;
+}
+
+#container {
+	width: 100vw;
+	height: 100vh;
+	border: 1px dotted #303030;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.modalIinfo {
+    z-index: 10;
+    visibility: hidden;
+    font-family: 'Electrolize', sans-serif;
+    color: #FFFFFF;
+	position: absolute; top: 40px; left: 40px; right: 40px;
+	height: auto;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+	pointer-events: none;
+    padding: 12px;
+    background: rgba(10, 10, 10, .7);
+    border-radius: 12px;
+
+}
+
+.modalIinfo h1 {
+    color: #4477FF;
+	text-align: center;
+	font-size: 21px;
+	opacity: 1;
+    padding-top: 0;
+	padding-bottom: 7px;
+}
+
+.modalIinfo p {
+	text-align: justify;
+	font-size: 18px;
+	font-family: 'Electrolize', sans-serif;
+	color: #FFF;
+	margin: 0;
+	line-height: 120%;
+}
+
+.modalIinfo p strong {
+    color: #4477FF;
+    text-shadow: 0 0 3px #0000FF;
+}
+
+.modalIinfo a {
+	color: #FF3100;
+	text-decoration: none;
+	position: relative;
+	pointer-events: auto;
+}
+
+#aboutBtn {
+    font-family: 'Electrolize', sans-serif;
+    z-index: 999;
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    background: rgba(10, 10, 10, .7);
+    border: 0;
+    border-radius: 12px;
+    padding: 6px;
+    color: #FFFFFF;
+}
+
+#aboutBtn:hover {
+    background-color: #4477FF;
+}
