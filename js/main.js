@@ -41,8 +41,8 @@ function init() {
     particlesGroup  = new THREE.Group();
     spotLightsGroup = new THREE.Group();
 
-	container       = document.getElementById( 'container' );
-	statsContainer  = document.getElementById( 'stats' );
+    container       = document.getElementById( 'container' );
+    statsContainer  = document.getElementById( 'stats' );
     recalculateDimensions();
 
     camera = new THREE.PerspectiveCamera( 40, width / height, 1, 7000 );
@@ -75,12 +75,12 @@ function init() {
     var guiContainer = document.getElementById('custom-gui');
     guiContainer.appendChild(threeGUI.domElement);
 
-	scene.fog = new THREE.Fog( 0x000000, 1500, 5000 );
+    scene.fog = new THREE.Fog( 0x000000, 1500, 5000 );
 
     particlesGroup.radius = 512;
     particlesGroup.positionY = 0;
-	plexusParticles = new PlexusParticles();
-	plexusParticles.init( particlesGroup );
+    plexusParticles = new PlexusParticles();
+    plexusParticles.init( particlesGroup );
     group.add( particlesGroup );
 
     dancingSpotLights = new SpotLights();
@@ -89,12 +89,12 @@ function init() {
     group.add(spotLightsGroup);
     spotLightsGroup.visible = dancingSpotLightsParams.enable;
 
-	renderer = setRenderer();
-	setPostProcessingChain();
-	setupBasicLightning();
+    renderer = setRenderer();
+    setPostProcessingChain();
+    setupBasicLightning();
 
-	group.position.y = -100;
-	group.add( disc );
+    group.position.y = -100;
+    group.add( disc );
     group.add( basicLightning );
     scene.add( group );
 
@@ -126,8 +126,8 @@ function init() {
     sceneMaterials.push(circleMaterial);
     disc.add(circle);
 
-	container.appendChild( renderer.domElement );
-	window.addEventListener( 'resize', onWindowResize, false );
+    container.appendChild( renderer.domElement );
+    window.addEventListener( 'resize', onWindowResize, false );
 }
 
 function setupBasicLightning() {
@@ -168,15 +168,15 @@ function animate() {
     updateDancingSpotLights();
     updateHedron();
     updateCameraPosition();
-	requestAnimationFrame( animate );
+    requestAnimationFrame( animate );
     analyser.getFrequencyData();
-	if (switchStats.enableStats) {
-	    threeStats.domElement.style.visibility = 'visible';
+    if (switchStats.enableStats) {
+        threeStats.domElement.style.visibility = 'visible';
         updateStats();
     } else {
         threeStats.domElement.style.visibility = 'hidden';
     }
-	composer.render();
+    composer.render();
 }
 
 function updateShadersAndLights() {
@@ -344,5 +344,5 @@ function setEvents() {
 }
 
 function render() {
-	renderer.render( scene, camera );
+    renderer.render( scene, camera );
 }
